@@ -13,8 +13,8 @@ def run_experiment(algorithms, benchmarks):
             all_histories = []
             
             for _ in range(50):  # 50 independent runs
-                optimizer = Algo(pop_size=20, dim=bench.dim, 
-                               max_fe=1000, benchmark=bench)
+                optimizer = Algo(pop_size=1200, dim=bench.dim, 
+                               max_fe=60000, benchmark=bench)
                 history = optimizer.run()
                 final_score = history[-1]
                 all_scores.append(final_score)
